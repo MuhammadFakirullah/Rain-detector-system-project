@@ -17,7 +17,7 @@ How to setup this project:
       
       vi. Micro USB
 
-2. Once all the component are already available, we assemble the component based on the circuit diagram provided. You can see the circut diagram named as "Circuit    diagram 1. png"
+2. Once all the component are already available, we assemble the component based on the circuit diagram provided. You can see the circuit diagram named as "Circuit    diagram 1. png"
 
 3. To connect YL-83 Rain Sensor Detection Board with NodeMCU ESP32, you have to follow this Pin Wiring configuration:
 
