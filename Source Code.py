@@ -11,8 +11,8 @@ pot = ADC(Pin(34)) #create ADC object called pot on GPIO34
 pot.atten(ADC.ATTN_11DB) #able to read voltage in full range(0-3.3V)
 
 SERVER = "mqtt.favoriot.com" 
-client = MQTTClient("umqtt_client", SERVER, user="ubZynbn5cDguBJdeLzuo71e7ZWAJSIzm", 
-                    password="ubZynbn5cDguBJdeLzuo71e7ZWAJSIzm")
+client = MQTTClient("umqtt_client", SERVER, user="your API Key here", 
+                    password="your API Key here")
 
 station = network.WLAN(network.STA_IF) #create network interface 
 station.active(True) #activate network interface 
@@ -28,7 +28,7 @@ while station.isconnected():
   pot_value = pot.read() #to read the pot value and save it in the pot_value variable 
   dat = {"device_developer_id": "ESP32@S58369", "data": {'Voltage:' :pot_value}} 
   data = str(json.dumps(dat)) #parse dat in json format 
-  topic = "ubZynbn5cDguBJdeLzuo71e7ZWAJSIzm/v2/streams"
+  topic = "your API Key here/v2/streams"
   
   client.publish(topic, data) 
   print(pot_value) #print the pot_value 
