@@ -26,7 +26,7 @@ if not station.isconnected(): #check if the station is connected to AP
   
 while station.isconnected(): 
   pot_value = pot.read() #to read the pot value and save it in the pot_value variable 
-  dat = {"device_developer_id": "ESP32@S58369", "data": {'Voltage:' :pot_value}} 
+  dat = {"device_developer_id": "your Device Developer ID", "data": {'Voltage:' :pot_value}} 
   data = str(json.dumps(dat)) #parse dat in json format 
   topic = "your API Key here/v2/streams"
   
